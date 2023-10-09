@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">DATES</h1>
+    <button id="sta">START</button>
+    <button id="stp">STOP</button>
+</body>
+<script>
+
+    
+    
+    const h1 = document.getElementById('h');
+    const d= function()
+    {
+        const date=new Date();
+        h1.innerHTML=date.toTimeString()
+        
+    }
+
+   let  str
+    document.querySelector('#sta').addEventListener("click",function()
+    {
+       str=setInterval(d,1000)
+        console.log("start")
+       
+})
+document.querySelector('#stp').addEventListener("click",function()
+{
+    clearInterval(str)
+    console.log("stopped")
+})
+
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h">Asyn Events</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("Prabin")
+    // },2000)
+    // setInterval(function(){
+    //     console.log("Prabin")
+    // },2000)
+
+//     const sayPrabin=function(){
+//         console.log("Prabin Kumar Sahu")
+//     }
+//  setTimeout(sayPrabin,5000)
+
+// const heading=document.getElementById('h')
+
+const changeText= function()
+{
+    document.querySelector("h1").innerHTML="PRABIN KUMAR SAHU"
+  
+    h.style.color="red"
+}
+const heading=setTimeout(changeText,5000)
+
+// const btn=document.getElementById('stop')
+
+// btn.addEventListener("click", clearTimeout(heading))
+
+document.querySelector('#stop').addEventListener('click', function()
+    {
+        clearTimeout(heading)
+        console.log("stoppped")
+    }
+)
+
+
+</script>
+</html>
